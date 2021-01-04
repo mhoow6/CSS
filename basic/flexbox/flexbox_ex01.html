@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <head>
+        <title>Flexbox Example</title>
+    </head>
+    <style>
+        .container {
+            background: beige;
+            /* 100%일경우 부모의 높이의 100%를 채움 */
+            /* 100viewhieght는 보이는 view의 100%를 채움 */
+            height: 100vh;
+
+            /* flexbox 선언 */
+            display: flex;
+
+            /* 주 축(main axis) 설정*/
+            flex-direction: column;
+
+            /* wrap할 시 화면에 아이템이 꽉 차면 자동으로 넘어감 */
+            flex-wrap: wrap;
+
+            /* flex-direction flex-wrap */
+            flex-flow: column wrap;
+
+            /* 아이템 배치 결정 */
+            justify-content: space-around;
+
+            /* 반대 축 기준으로 아이템 배치 결정*/
+            /* item 기준 속성임 */
+            align-items: baseline;
+
+            /* 반대 축 기준으로 아이템 배치 결정*/
+            /* 지원 안 되는 브라우저도 있을 수 있음*/
+            align-content: center;
+        }
+
+        .item {
+            width: 40px;
+            height: 40px;
+        }
+
+        .item1 {
+            background: #ef9a9a;
+
+            /* 기본값 0 */
+            /* 아이템 순서 강제로 결정 */
+            order: 1;
+
+            /* container가 커졌을 때 공간을 채우는 속성 */
+            flex-grow: 1;
+
+            /* item이 container에 차지하는 비율 */
+            flex-basis: 60%;
+
+            /* grow shrink basis */
+            flex: 1 1 auto;
+
+            /* 특정 item 배치만 바꾸고 싶을때 사용 */
+            align-self: center;
+        }
+
+        .item2 {
+            background: #e57373;
+            
+            flex-grow: 3;
+
+            /* container가 줄어들었을 때 공간을 채우는 속성 */
+            flex-shrink: 1;
+        }
+
+        .item3 {
+            background: #ef5350;
+        }
+
+        .item4 {
+            background: #f44336;
+        }
+
+        .item5 {
+            background: #e53935;
+        }
+    </style>
+    <body>
+        <!-- div.container>div.item.item${$}*5 -->
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item item2">2</div>
+            <div class="item item3">3</div>
+            <div class="item item4">4</div>
+            <div class="item item5">5</div>
+        </div>
+    </body>
+</html>
