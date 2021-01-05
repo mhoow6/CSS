@@ -1,0 +1,45 @@
+div {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  background: red;
+}
+
+.container {
+  background: yellow;
+  left: 20px;
+  top: 20px;
+
+  /* position: static; */
+  /* HTML 정의된 순서대로 배치 */
+
+  /*원래 있던 자리에서 상대적으로 배치 */
+  position: relative;
+}
+
+.box {
+  background: blue;
+  left: 20px;
+  top: 20px;
+
+  /* 내 아이템이 담겨있는 컨테이너 기준으로 배치 */
+  position: absolute;
+}
+
+.fix {
+  background: pink;
+  right: 20px;
+  top: 20px;
+
+  /*웹 페이지 기준으로 배치*/
+  position: fixed;
+}
+
+.sticky {
+  background: orange;
+  right: 20px;
+  bottom: 20px;
+
+  /*웹 페이지가 스크롤되어도 그 자리에 배치*/
+  position: fixed;
+}
