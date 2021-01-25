@@ -6,7 +6,7 @@ body {
 
 .buscar-caja {
   position: absolute;
-  top: 50%;
+  top: 50%; /* 부모 엘리먼트의 %*/
   left: 50%;
   transform: translate(-50%, -50%);
   background: #2f3640;
@@ -47,12 +47,12 @@ body {
   border: none;
   background: none;
   outline: none;
-  float: left;
+  float: left; /* 컨테이너에서의 무조건적인 배치 */
   padding: 0;
   color: white;
   font-size: 16px;
   transition: 0.4s;
-  line-height: 40px;
+  line-height: 40px; /* 줄 높이 */
   width: 0px;
   font-weight: bold;
 }
