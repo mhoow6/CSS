@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+</head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+    }
+
+    div.x {
+        background-color: #2196F3;
+        top: 20px;
+        left: 200px;
+        z-index: 2;
+    }
+
+    div.y {
+        background-color: #1976D2;
+        top: 50px;
+        left: 260px;
+        z-index: 3;
+    }
+
+    div.z {
+        background-color: #0D47A1;
+        top: 80px;
+        left: 230px;
+        z-index: 1;
+    }
+
+    /* 자식은 부모 요소와 같이 움직인다 */
+    div.xx {
+        background-color: #F44336;
+        top: 30px;
+        left: 50px;
+        z-index: 3;
+    }
+
+    div.yy {
+        background-color: #D32F2F;
+        top: 60px;
+        left: 110px;
+        z-index: 2;
+    }
+
+    div.zz {
+        background-color: #B71C1C;
+        top: 90px;
+        left: 70px;
+        z-index: 1;
+    }
+</style>
+<body>
+    <!-- z-index를 추가하지 않으면 코드 순서로 위치가 결정됨 -->
+    <!-- z-index 속성을 통해 요소들의 수직 위치를 결정 -->
+    <div class="x"></div>
+    <div class="y"></div>
+    <div class="z">
+        <div class="xx"></div>
+        <div class="yy"></div>
+        <div class="zz"></div>
+    </div>
+</body>
+
+</html>
