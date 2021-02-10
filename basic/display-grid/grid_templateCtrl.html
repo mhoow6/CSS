@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 50px; /* 기본 칸 50px */
+
+        /* grid-column 속성으로 통제받는 것은 */
+        /* 1:2 비율로 */
+	    grid-auto-columns: 1fr 2fr; 
+    }
+
+    .item:nth-child(1) {
+        grid-column: 2;
+    }
+
+    .item:nth-child(2) {
+        grid-column: 3;
+    }
+
+    .item:nth-child(3) {
+        grid-column: 4;
+    }
+
+    .item:nth-child(4) {
+        grid-column: 5;
+    }
+
+    .item:nth-child(5) {
+        grid-column: 6;
+    }
+
+    .item:nth-child(6) {
+        grid-column: 7;
+    }
+</style>
+
+<body>
+    <!-- 그리드 컨테이너 -->
+    <div class="container">
+        <!-- 그리드 아이템 -->
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid-container {
+  grid-template-rows: repeat(3, 300px);
+  grid-template-columns: repeat(4, 1fr);
+
+  /**
+   * 그리드 템플릿 영역 설정
+   * 각 행은 동일한 개수의 열 설정이 요구됩니다.
+   */
+  grid-template-areas:
+    "header header header header"  /* 1행: 4열 모두 header                */
+    "main main . sidebar"          /* 2행: 2열 main 1열, 공백 1열, sidebar */
+    "footer footer footer footer"; /* 3행: 4열 모두 header                */
+}
+
+/* 그리드 영역 이름 설정 */
+/* grid-template-areas 속성은 그리드 라인이 아닌 "영역"만 설정함 */
+/* 
+[header-start]                               [header-end]
+[main-start]  [main-end ] . [sidebar-start]  [sidebar-end]
+[footer-start]                               [footer-end]
+*/
+.grid-header  { grid-area: 'header';  }
+.grid-main    { grid-area: 'main';    }
+.grid-sidebar { grid-area: 'sidebar'; }
+.grid-footer  { grid-area: 'footer';  }
+</style>
+<body>
+    <div class="grid-container">
+        <div class="grid-header"></div>
+        <div class="grid-main"></div>
+        <div class="grid-sidebar"></div>
+        <div class="grid-footer"></div>
+    </div>
+</body>
+</html>
